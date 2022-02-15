@@ -218,7 +218,7 @@ function addTranslationLink(pageUrl, branchName, branchLang) {
 function findPagesInSiteStartingWith(siteId, fullname, callback) {
   var query = "&s=" + siteId + "&q=" + fullname;
   var url =
-    "https://wikidot.com/quickmodule.php?module=PageLookupQModule" + query;
+    "http://backrooms-wiki-cn.wikidot.com/quickmodule.php?module=PageLookupQModule" + query;
   var request = new XMLHttpRequest();
   request.open("GET", url, true);
   request.addEventListener("load", function () {
