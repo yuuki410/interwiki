@@ -6,35 +6,31 @@
     <!-- Branches' info -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/scpwiki/interwiki@main/js/branches-info-scp.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/scpwiki/interwiki@main/js/branches-info-wl.js"
+      src="https://cdn.jsdelivr.net/gh/yuuki410/interwiki@backrooms-cn/js/branches-info.js"
     ></script>
 
     <!-- C-take's resizing iframe method -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/scpwiki/interwiki@main/js/createResizeIframe.js"
+      src="https://cdn.jsdelivr.net/gh/yuuki410/interwiki@backrooms-cn/js/createResizeIframe.js"
     ></script>
 
     <!-- Main interwiki procedure -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/scpwiki/interwiki@main/js/interwiki.js"
+      src="https://cdn.jsdelivr.net/gh/yuuki410/interwiki@backrooms-cn/js/interwiki.js"
     ></script>
 
     <!-- CSS styling -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/scpwiki/interwiki@main/js/styles.js"
+      src="https://cdn.jsdelivr.net/gh/yuuki410/interwiki@backrooms-cn/js/styles.js"
     ></script>
 
     <!-- Retrieving/adding translation links -->
     <script
       type="text/javascript"
-      src="https://cdn.jsdelivr.net/gh/scpwiki/interwiki@main/js/links.js"
+      src="https://cdn.jsdelivr.net/gh/yuuki410/interwiki@backrooms-cn/js/links.js"
     ></script>
 
     <script type="text/javascript">
@@ -43,7 +39,6 @@
       "use strict";
 
       addEventListener("DOMContentLoaded", function () {
-        var community = getQueryString(location.search, "community");
         var pagename = getQueryString(location.search, "pagename");
         var lang = getQueryString(location.search, "lang");
         var preventWikidotBaseStyle = getQueryString(
@@ -51,7 +46,7 @@
           "preventWikidotBaseStyle"
         );
 
-        createInterwiki(community, pagename, lang, preventWikidotBaseStyle);
+        createInterwiki(pagename, lang, preventWikidotBaseStyle);
 
         // Expose identity for styleFrame
         window.isInterwikiFrame = true;

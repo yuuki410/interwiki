@@ -68,7 +68,6 @@ function pullStyles() {
  * Main procedure for the interwiki. Prepare contextual data, apply CSS
  * styling, and add links to translations.
  *
- * @param {"scp" | "wl"} community - The community of the interwiki.
  * @param {String} pagename - The Wikidot fullname of the current page.
  * @param {String} currentBranchLang - The language code of the current branch
  * of the given community.
@@ -76,16 +75,8 @@ function pullStyles() {
  * addition of Wikidot's base style to the interwiki. If any value other
  * than the string "true", the style will be added with priority -1.
  */
-function createInterwiki(
-  community,
-  pagename,
-  currentBranchLang,
-  preventWikidotBaseStyle
-) {
+function createInterwiki(pagename, currentBranchLang, preventWikidotBaseStyle) {
   pagename = pagename.replace(/^_default:/, "");
-
-  // Get the list of branches for the given community
-  var branches = { wl: wlBranches, scp: scpBranches }[community] || {};
 
   // Get the config for the current branch, if configured
   var currentBranch = branches[currentBranchLang] || {};
